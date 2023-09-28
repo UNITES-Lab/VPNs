@@ -184,9 +184,7 @@ def set_scored_network(network, args):
     network=replace_layers(network,Conv2d,cl,'weight',args)
     network=replace_layers(network,Linear,ll,'weight',args)
     network.to(args.device)
-    if args.hydra_scaled_init:
-        print('Using scaled score initialization\n')
-        initialize_scaled_score(network)
+    initialize_scaled_score(network)
     
     return network
 

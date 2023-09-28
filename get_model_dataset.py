@@ -62,31 +62,18 @@ def get_model(args):
 def image_transform(args, transform_type):
     normalize = transforms.Normalize(mean=IMAGENETNORMALIZE['mean'], std=IMAGENETNORMALIZE['std'])
     if transform_type == 'vp':
-        if args.randomcrop:
-            print('Using randomcrop\n')
-            train_transform = transforms.Compose([
-                transforms.RandomCrop((32, 32), padding=4),
-                transforms.RandomHorizontalFlip(),
-                transforms.Resize((args.input_size, args.input_size)),
-                transforms.ToTensor(),
-            ])
-            test_transform = transforms.Compose([
-                transforms.Resize((args.input_size, args.input_size)),
-                transforms.ToTensor(),
-            ])
-        else:
-            train_transform = transforms.Compose([
-                transforms.Resize((int(args.input_size*9/8), int(args.input_size*9/8))),
-                transforms.RandomCrop(args.input_size),
-                transforms.RandomHorizontalFlip(),
-                transforms.Lambda(lambda x: x.convert('RGB') if hasattr(x, 'convert') else x),
-                transforms.ToTensor(),
-            ])
-            test_transform = transforms.Compose([
-                transforms.Resize((args.input_size, args.input_size)),
-                transforms.Lambda(lambda x: x.convert('RGB') if hasattr(x, 'convert') else x),
-                transforms.ToTensor(),
-            ])
+        train_transform = transforms.Compose([
+            transforms.Resize((int(args.input_size*9/8), int(args.input_size*9/8))),
+            transforms.RandomCrop(args.input_size),
+            transforms.RandomHorizontalFlip(),
+            transforms.Lambda(lambda x: x.convert('RGB') if hasattr(x, 'convert') else x),
+            transforms.ToTensor(),
+        ])
+        test_transform = transforms.Compose([
+            transforms.Resize((args.input_size, args.input_size)),
+            transforms.Lambda(lambda x: x.convert('RGB') if hasattr(x, 'convert') else x),
+            transforms.ToTensor(),
+        ])
     elif transform_type == 'ff':
         train_transform = transforms.Compose([
             transforms.Resize((252,252)),
@@ -263,7 +250,7 @@ def get_indices(full_data):
 def choose_dataloader(args):
     if args.prune_method=='vpns' or 'vp' in args.prune_mode:
         print('choose visual prompt dataset')
-        train_loader, vp_loader, test_loader = get_torch_dataset(args, 'vp')       
+        train_loader, val_loader, test_loader = get_torch_dataset(args, 'vp')       
     else:
         print('choose full finetune dataset')
         train_loader, val_loader, test_loader = get_torch_dataset(args, 'ff')

@@ -2,7 +2,9 @@ This repository contains the code to reproduce experiments performed in VISUAL P
 
 1. Install requirements: 
 ```
-pip install -r requirement.txt
+conda create -n vpns python=3.8
+conda activate vpns
+pip install -r requirements.txt
 ```
 
 2. Symlink datasets (Optional):
