@@ -20,10 +20,10 @@ def main():
     parser.add_argument('--workers', type=int, default=2, help='number of workers in dataloader')
     parser.add_argument('--print_freq', default=200, type=int, help='print frequency')
     parser.add_argument('--network', default='resnet18', choices=["resnet18", "resnet50", "vgg"])
-    parser.add_argument('--dataset', default="dtd", choices=['cifar10', 'cifar100', 'flowers102', 'dtd', 'food101', 'oxfordpets', 'stanfordcars', 'sun397', 'tiny_imagenet', 'imagenet'])
+    parser.add_argument('--dataset', default="dtd", choices=['cifar10', 'cifar100', 'flowers102', 'dtd', 'food101', 'oxfordpets', 'stanfordcars', 'tiny_imagenet', 'imagenet'])
     parser.add_argument('--experiment_name', default='vpns', type=str, help='name of experiment')
     parser.add_argument('--gpu', type=int, default=0, help='gpu device id')
-    parser.add_argument('--seed', default=7, type=int, help='random seed')
+    parser.add_argument('--seed', default=7, type=int, help='random seed, we use 7, 9, 17')
 
     ##################################### VP Setting #################################################
     parser.add_argument('--data', type=str, default='dataset', help='location of the data corpus')
