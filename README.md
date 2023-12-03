@@ -1,10 +1,10 @@
-# VISUAL PROMPTING UPGRADES NEURAL NETWORK SPARSIFICATION: A DATA-MODEL PERSPECTIVE (VPNs)
+# Visual Prompting Upgrades Neural Network Sparsification: A Data-Model Perspective (VPNs)
 
 <p align="left">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-4caf50.svg" alt="License"></a>
 </p>
 
-Code for the paper [VISUAL PROMPTING UPGRADES NEURAL NETWORK SPARSIFICATION: A DATA-MODEL PERSPECTIVE]()
+Code for the paper [Visual Prompting Upgrades Neural Network Sparsification: A Data-Model Perspective]()
 
 Authors: Can Jin, Tianjin Huang, Yihua Zhang, Mykola Pechenizkiy, Sijia Liu, Shiwei Liu, Tianlong Chen
 
