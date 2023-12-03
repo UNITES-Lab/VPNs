@@ -15,18 +15,18 @@ The rapid development of large-scale deep learning models questions the affordab
 of hardware platforms, which necessitates the pruning to reduce their computational 
 and memory footprints. Sparse neural networks as the product, have demonstrated numerous 
 favorable benefits like low complexity, undamaged generalization, _etc_. Most of the 
-prominent pruning strategies are invented from a model-centric perspective, focusing 
+prominent pruning strategies are invented from a _model-centric_ perspective, focusing 
 on searching and preserving crucial weights by analyzing network topologies. 
 However, the role of data and its interplay with model-centric pruning has remained 
-relatively unexplored. In this research, we introduce a novel data-model co-design 
+relatively unexplored. In this research, we introduce a novel _data-model co-design_ 
 perspective: to promote superior weight sparsity by learning important model topology 
-and adequate input data in a synergetic manner. Specifically, customized Visual 
-Prompts are mounted to upgrade neural Network sparsification in our proposed VPNs 
+and adequate input data in a synergetic manner. Specifically, customized **V**isual 
+**P**rompts are mounted to upgrade neural **N**etwork **s**parsification in our proposed </strong></code>VPNs</code></strong> 
 framework. As a pioneering effort, this paper conducts systematic investigations about 
 the impact of different visual prompts on model pruning and suggests an effective joint 
 optimization approach. Extensive experiments with 3 network architectures and 8 datasets 
-evidence the substantial performance improvements from VPNs over existing start-of-the-art 
-pruning algorithms. Furthermore, we find that subnetworks discovered by VPNs from pre-trained 
+evidence the substantial performance improvements from </strong></code>VPNs</code></strong> over existing start-of-the-art 
+pruning algorithms. Furthermore, we find that subnetworks discovered by </strong></code>VPNs</code></strong> from pre-trained 
 models enjoy better transferability across diverse downstream scenarios. These insights 
 shed light on new promising possibilities of data-model co-designs for vision model sparsification. 
 
@@ -59,7 +59,7 @@ ResNet-50 on Tiny-ImageNet at 40%, 50%, 60%, 70%, 80%, and 90% sparsity levels (
 bash vpns_resnet50_tiny_imagenet.sh
 ```
 
-Please change the network and dataset in vpns.sh file to run more experiments.
+Please change the network and dataset in .sh file to run more experiments.
 
 # 4. Checkpoints
 
