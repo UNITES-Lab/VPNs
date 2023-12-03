@@ -59,9 +59,11 @@ ResNet-50 on Tiny-ImageNet at 40%, 50%, 60%, 70%, 80%, and 90% sparsity levels (
 bash vpns_resnet50_tiny_imagenet.sh
 ```
 
-Please change the network and dataset in .sh file to run more experiments.
+Please change the network and dataset in `vpns.sh` file to run more experiments.
 
 # 4. Checkpoints
+
+We provide some best checkpoints of VPNs pruning here.
 
 | Network+Dataset | 40% sparsity | 60% sparsity | 70% sparsity |
 | :----------: | :----------: | :----------: | :----------: |
