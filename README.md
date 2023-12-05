@@ -4,7 +4,7 @@
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-4caf50.svg" alt="License"></a>
 </p>
 
-Code for the paper [Visual Prompting Upgrades Neural Network Sparsification: A Data-Model Perspective]()
+Code for the paper [Visual Prompting Upgrades Neural Network Sparsification: A Data-Model Perspective](https://arxiv.org/pdf/2312.01397.pdf)
 
 Authors: Can Jin, Tianjin Huang, Yihua Zhang, Mykola Pechenizkiy, Sijia Liu, Shiwei Liu, Tianlong Chen
 
@@ -73,13 +73,11 @@ We provide some best checkpoints of VPNs pruning here.
 
 # Citation
 ```bibtex
-@article{example2021,
-  title={Example Title},
-  author={Author, First and Coauthor, Second},
-  journal={Journal Name},
-  volume={1},
-  number={1},
-  pages={1--10},
-  year={2021},
-  publisher={Publisher}
+@misc{jin2023visual,
+      title={Visual Prompting Upgrades Neural Network Sparsification: A Data-Model Perspective}, 
+      author={Can Jin and Tianjin Huang and Yihua Zhang and Mykola Pechenizkiy and Sijia Liu and Shiwei Liu and Tianlong Chen},
+      year={2023},
+      eprint={2312.01397},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
